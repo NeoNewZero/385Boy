@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <topLevel name="nios_system" />
+ <deviceFamily name="cycloneive" />
+ <modelMap
+   controllerPath="nios_system.onchip_memory"
+   modelPath="nios_system.onchip_memory" />
+</simPackage>

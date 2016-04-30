@@ -1,0 +1,63 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlib lab7_sos
+vmap lab7_sos lab7_sos
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis {C:/Lab8_provided/lab7_sos/synthesis/lab7_sos.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/altera_reset_controller.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/altera_reset_synchronizer.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_avalon_st_adapter.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/altera_avalon_sc_fifo.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_sysid_qsys_0.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_sw_sig.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_sw_port.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_sdram_pll.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_sdram.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_onchip_memory2_0.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_nios2_qsys_0.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_nios2_qsys_0_jtag_debug_module_sysclk.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_nios2_qsys_0_jtag_debug_module_tck.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_nios2_qsys_0_jtag_debug_module_wrapper.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_nios2_qsys_0_oci_test_bench.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_nios2_qsys_0_test_bench.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_jtag_uart_0.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_hw_sig.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_hw_port.v}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/SubBytes.sv}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/io_module.sv}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/InvMixColumns.sv}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/aes_controller.sv}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/AES.sv}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/HexDriver.sv}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/invShiftRows.sv}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/lab9.sv}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/KeyExpansion.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_irq_mapper.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/altera_avalon_st_clock_crosser.v}
+vlog -vlog01compat -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/altera_std_synchronizer_nocut.v}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/altera_merlin_arbitrator.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_rsp_mux_001.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_rsp_mux.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_rsp_demux_001.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_rsp_demux.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_cmd_mux_001.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_cmd_mux.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_cmd_demux_001.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_cmd_demux.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_router_003.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_router_002.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_router_001.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/lab7_sos_mm_interconnect_0_router.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/altera_merlin_slave_agent.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/altera_merlin_burst_uncompressor.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/altera_merlin_master_agent.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/altera_merlin_slave_translator.sv}
+vlog -sv -work lab7_sos +incdir+C:/Lab8_provided/lab7_sos/synthesis/submodules {C:/Lab8_provided/lab7_sos/synthesis/submodules/altera_merlin_master_translator.sv}
+

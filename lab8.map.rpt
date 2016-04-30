@@ -1,0 +1,431 @@
+Analysis & Synthesis report for lab8
+Fri Apr 29 14:59:33 2016
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Fri Apr 29 14:59:33 2016           ;
+; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name                      ; lab8                                        ;
+; Top-level Entity Name              ; final_project                               ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; final_project      ; lab8               ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+    Info: Processing started: Fri Apr 29 14:59:22 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab8 -c lab8
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
+    Info (12023): Found entity 1: HexDriver File: C:/Lab8_provided/HexDriver.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file final_project.sv
+    Info (12023): Found entity 1: final_project File: C:/Lab8_provided/final_project.sv Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/nios_system.v
+    Info (12023): Found entity 1: nios_system File: C:/Lab8_provided/nios_system/synthesis/nios_system.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_reset_controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_reset_synchronizer.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_irq_clock_crosser.sv
+    Info (12023): Found entity 1: altera_irq_clock_crosser File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_irq_clock_crosser.sv Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_irq_mapper.sv
+    Info (12023): Found entity 1: nios_system_irq_mapper File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_irq_mapper.sv Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_001.v
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_avalon_st_adapter_001 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_001.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_avalon_st_adapter File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
+    Info (12023): Found entity 1: altera_avalon_st_handshake_clock_crosser File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_avalon_st_clock_crosser.v
+    Info (12023): Found entity 1: altera_avalon_st_clock_crosser File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_avalon_st_clock_crosser.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_avalon_st_pipeline_base.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_std_synchronizer_nocut.v
+    Info (12023): Found entity 1: altera_std_synchronizer_nocut File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_std_synchronizer_nocut.v Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_width_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_width_adapter File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_width_adapter.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_address_alignment.sv
+    Info (12023): Found entity 1: altera_merlin_address_alignment File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_address_alignment.sv Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv Line: 40
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv Line: 103
+    Info (12023): Found entity 2: altera_merlin_arb_adder File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv Line: 228
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux_002.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_rsp_mux_002 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux_002.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux_001.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_rsp_mux_001 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux_001.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_rsp_mux File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux_009.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_rsp_demux_009 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux_009.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux_004.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_rsp_demux_004 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux_004.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux_001.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_rsp_demux_001 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux_001.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_rsp_demux File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux_004.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_cmd_mux_004 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux_004.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux_001.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_cmd_mux_001 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux_001.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_cmd_mux File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux_002.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_cmd_demux_002 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux_002.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux_001.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_cmd_demux_001 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux_001.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_cmd_demux File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_burst_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_burst_adapter.sv Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_uncompressed_only File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv Line: 39
+Info (12021): Found 5 design units, including 5 entities, in source file nios_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_burstwrap_increment File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 40
+    Info (12023): Found entity 2: altera_merlin_burst_adapter_adder File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 55
+    Info (12023): Found entity 3: altera_merlin_burst_adapter_subtractor File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 77
+    Info (12023): Found entity 4: altera_merlin_burst_adapter_min File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 98
+    Info (12023): Found entity 5: altera_merlin_burst_adapter_13_1 File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 264
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_burst_adapter_new.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_new File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_burst_adapter_new.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_incr_burst_converter.sv
+    Info (12023): Found entity 1: altera_incr_burst_converter File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_incr_burst_converter.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_wrap_burst_converter.sv
+    Info (12023): Found entity 1: altera_wrap_burst_converter File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_wrap_burst_converter.sv Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_default_burst_converter.sv
+    Info (12023): Found entity 1: altera_default_burst_converter File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_default_burst_converter.sv Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_stage File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_traffic_limiter.sv
+    Info (12023): Found entity 1: altera_merlin_traffic_limiter File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_traffic_limiter.sv Line: 49
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/altera_merlin_reorder_memory.sv
+    Info (12023): Found entity 1: altera_merlin_reorder_memory File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_reorder_memory.sv Line: 28
+    Info (12023): Found entity 2: memory_pointer_controller File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_reorder_memory.sv Line: 185
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_avalon_sc_fifo.v Line: 21
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_007.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_router_007_default_decode File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_007.sv Line: 45
+    Info (12023): Found entity 2: nios_system_mm_interconnect_0_router_007 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_007.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_004.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_router_004_default_decode File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_004.sv Line: 45
+    Info (12023): Found entity 2: nios_system_mm_interconnect_0_router_004 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_004.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_003.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_router_003_default_decode File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_003.sv Line: 45
+    Info (12023): Found entity 2: nios_system_mm_interconnect_0_router_003 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_003.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_002.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_router_002_default_decode File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_002.sv Line: 45
+    Info (12023): Found entity 2: nios_system_mm_interconnect_0_router_002 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_002.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_001.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_router_001_default_decode File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_001.sv Line: 45
+    Info (12023): Found entity 2: nios_system_mm_interconnect_0_router_001 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_001.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_router_default_decode File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router.sv Line: 45
+    Info (12023): Found entity 2: nios_system_mm_interconnect_0_router File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router.sv Line: 84
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_slave_agent.sv Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_master_agent.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_slave_translator.sv Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_merlin_master_translator.sv Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_video_pll_0.v
+    Info (12023): Found entity 1: nios_system_video_pll_0 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_video_pll_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v
+    Info (12023): Found entity 1: altera_up_avalon_reset_from_locked_signal File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_up_altpll.v
+    Info (12023): Found entity 1: altera_up_altpll File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_up_altpll.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_video_fifo.v
+    Info (12023): Found entity 1: nios_system_video_fifo File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_video_fifo.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_up_avalon_video_vga_timing.v
+    Info (12023): Found entity 1: altera_up_avalon_video_vga_timing File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_up_avalon_video_vga_timing.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_vga_controller.v
+    Info (12023): Found entity 1: nios_system_vga_controller File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_vga_controller.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_timer_0.v
+    Info (12023): Found entity 1: nios_system_timer_0 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_timer_0.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_sys_sdram_pll_0.v
+    Info (12023): Found entity 1: nios_system_sys_sdram_pll_0 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_sys_sdram_pll_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_switches.v
+    Info (12023): Found entity 1: nios_system_switches File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_switches.v Line: 21
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/nios_system_sdram.v
+    Info (12023): Found entity 1: nios_system_sdram_input_efifo_module File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_sdram.v Line: 21
+    Info (12023): Found entity 2: nios_system_sdram File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_sdram.v Line: 158
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_up_video_scaler_shrink.v
+    Info (12023): Found entity 1: altera_up_video_scaler_shrink File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_up_video_scaler_shrink.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_up_video_scaler_multiply_width.v
+    Info (12023): Found entity 1: altera_up_video_scaler_multiply_width File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_up_video_scaler_multiply_width.v Line: 28
+Warning (10275): Verilog HDL Module Instantiation warning at altera_up_video_scaler_multiply_height.v(288): ignored dangling comma in List of Port Connections File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_up_video_scaler_multiply_height.v Line: 288
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_up_video_scaler_multiply_height.v
+    Info (12023): Found entity 1: altera_up_video_scaler_multiply_height File: C:/Lab8_provided/nios_system/synthesis/submodules/altera_up_video_scaler_multiply_height.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_scaler.v
+    Info (12023): Found entity 1: nios_system_scaler File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_scaler.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_rgb_resampler.v
+    Info (12023): Found entity 1: nios_system_rgb_resampler File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_rgb_resampler.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_pixel_buffer_dma.v
+    Info (12023): Found entity 1: nios_system_pixel_buffer_dma File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_pixel_buffer_dma.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_pixel_buffer.v
+    Info (12023): Found entity 1: nios_system_pixel_buffer File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_pixel_buffer.v Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_onchip_memory.v
+    Info (12023): Found entity 1: nios_system_onchip_memory File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_onchip_memory.v Line: 21
+Info (12021): Found 27 design units, including 27 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v
+    Info (12023): Found entity 1: nios_system_nios2_qsys_0_ic_data_module File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 21
+    Info (12023): Found entity 2: nios_system_nios2_qsys_0_ic_tag_module File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 88
+    Info (12023): Found entity 3: nios_system_nios2_qsys_0_bht_module File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 156
+    Info (12023): Found entity 4: nios_system_nios2_qsys_0_register_bank_a_module File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 224
+    Info (12023): Found entity 5: nios_system_nios2_qsys_0_register_bank_b_module File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 289
+    Info (12023): Found entity 6: nios_system_nios2_qsys_0_dc_tag_module File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 354
+    Info (12023): Found entity 7: nios_system_nios2_qsys_0_dc_data_module File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 419
+    Info (12023): Found entity 8: nios_system_nios2_qsys_0_dc_victim_module File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 483
+    Info (12023): Found entity 9: nios_system_nios2_qsys_0_nios2_oci_debug File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 550
+    Info (12023): Found entity 10: nios_system_nios2_qsys_0_ociram_sp_ram_module File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 691
+    Info (12023): Found entity 11: nios_system_nios2_qsys_0_nios2_ocimem File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 754
+    Info (12023): Found entity 12: nios_system_nios2_qsys_0_nios2_avalon_reg File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 935
+    Info (12023): Found entity 13: nios_system_nios2_qsys_0_nios2_oci_break File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 1027
+    Info (12023): Found entity 14: nios_system_nios2_qsys_0_nios2_oci_xbrk File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 1321
+    Info (12023): Found entity 15: nios_system_nios2_qsys_0_nios2_oci_dbrk File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 1581
+    Info (12023): Found entity 16: nios_system_nios2_qsys_0_nios2_oci_itrace File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 1769
+    Info (12023): Found entity 17: nios_system_nios2_qsys_0_nios2_oci_td_mode File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 2152
+    Info (12023): Found entity 18: nios_system_nios2_qsys_0_nios2_oci_dtrace File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 2219
+    Info (12023): Found entity 19: nios_system_nios2_qsys_0_nios2_oci_compute_input_tm_cnt File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 2313
+    Info (12023): Found entity 20: nios_system_nios2_qsys_0_nios2_oci_fifo_wrptr_inc File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 2384
+    Info (12023): Found entity 21: nios_system_nios2_qsys_0_nios2_oci_fifo_cnt_inc File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 2426
+    Info (12023): Found entity 22: nios_system_nios2_qsys_0_nios2_oci_fifo File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 2472
+    Info (12023): Found entity 23: nios_system_nios2_qsys_0_nios2_oci_pib File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 2973
+    Info (12023): Found entity 24: nios_system_nios2_qsys_0_nios2_oci_im File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 3041
+    Info (12023): Found entity 25: nios_system_nios2_qsys_0_nios2_performance_monitors File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 3157
+    Info (12023): Found entity 26: nios_system_nios2_qsys_0_nios2_oci File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 3173
+    Info (12023): Found entity 27: nios_system_nios2_qsys_0 File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 3748
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_sysclk.v
+    Info (12023): Found entity 1: nios_system_nios2_qsys_0_jtag_debug_module_sysclk File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_sysclk.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_tck.v
+    Info (12023): Found entity 1: nios_system_nios2_qsys_0_jtag_debug_module_tck File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_tck.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_wrapper.v
+    Info (12023): Found entity 1: nios_system_nios2_qsys_0_jtag_debug_module_wrapper File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_wrapper.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_qsys_0_mult_cell.v
+    Info (12023): Found entity 1: nios_system_nios2_qsys_0_mult_cell File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_mult_cell.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_qsys_0_oci_test_bench.v
+    Info (12023): Found entity 1: nios_system_nios2_qsys_0_oci_test_bench File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_oci_test_bench.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_qsys_0_test_bench.v
+    Info (12023): Found entity 1: nios_system_nios2_qsys_0_test_bench File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_test_bench.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_leds.v
+    Info (12023): Found entity 1: nios_system_leds File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_leds.v Line: 21
+Info (12021): Found 5 design units, including 5 entities, in source file nios_system/synthesis/submodules/nios_system_jtag_uart.v
+    Info (12023): Found entity 1: nios_system_jtag_uart_sim_scfifo_w File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_jtag_uart.v Line: 21
+    Info (12023): Found entity 2: nios_system_jtag_uart_scfifo_w File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_jtag_uart.v Line: 77
+    Info (12023): Found entity 3: nios_system_jtag_uart_sim_scfifo_r File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_jtag_uart.v Line: 162
+    Info (12023): Found entity 4: nios_system_jtag_uart_scfifo_r File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_jtag_uart.v Line: 240
+    Info (12023): Found entity 5: nios_system_jtag_uart File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_jtag_uart.v Line: 327
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_din.v
+    Info (12023): Found entity 1: nios_system_din File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_din.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_buttons.v
+    Info (12023): Found entity 1: nios_system_buttons File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_buttons.v Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_address.v
+    Info (12023): Found entity 1: nios_system_address File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_address.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file core/tv80s.v
+    Info (12023): Found entity 1: tv80s File: C:/Lab8_provided/core/tv80s.v Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file core/tv80n.v
+    Info (12023): Found entity 1: tv80n File: C:/Lab8_provided/core/tv80n.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file core/tv80_reg.v
+    Info (12023): Found entity 1: tv80_reg File: C:/Lab8_provided/core/tv80_reg.v Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file core/tv80_mcode.v
+    Info (12023): Found entity 1: tv80_mcode File: C:/Lab8_provided/core/tv80_mcode.v Line: 25
+Warning (10463): Verilog HDL Declaration warning at tv80_core.v(74): "do" is SystemVerilog-2005 keyword File: C:/Lab8_provided/core/tv80_core.v Line: 74
+Warning (10463): Verilog HDL Declaration warning at tv80_core.v(97): "do" is SystemVerilog-2005 keyword File: C:/Lab8_provided/core/tv80_core.v Line: 97
+Warning (10335): Unrecognized synthesis attribute "dc_script_begin" at core/tv80_core.v(1374) File: C:/Lab8_provided/core/tv80_core.v Line: 1374
+Warning (10335): Unrecognized synthesis attribute "dc_script_end" at core/tv80_core.v(1376) File: C:/Lab8_provided/core/tv80_core.v Line: 1376
+Info (12021): Found 1 design units, including 1 entities, in source file core/tv80_core.v
+    Info (12023): Found entity 1: tv80_core File: C:/Lab8_provided/core/tv80_core.v Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file core/tv80_alu.v
+    Info (12023): Found entity 1: tv80_alu File: C:/Lab8_provided/core/tv80_alu.v Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file divider.sv
+    Info (12023): Found entity 1: divider File: C:/Lab8_provided/divider.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memunit.sv
+    Info (12023): Found entity 1: mem_unit File: C:/Lab8_provided/memunit.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at final_project.sv(132): created implicit net for "vid_address" File: C:/Lab8_provided/final_project.sv Line: 132
+Warning (10037): Verilog HDL or VHDL warning at nios_system_nios2_qsys_0.v(2120): conditional expression evaluates to a constant File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 2120
+Warning (10037): Verilog HDL or VHDL warning at nios_system_nios2_qsys_0.v(2122): conditional expression evaluates to a constant File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 2122
+Warning (10037): Verilog HDL or VHDL warning at nios_system_nios2_qsys_0.v(2278): conditional expression evaluates to a constant File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 2278
+Warning (10037): Verilog HDL or VHDL warning at nios_system_nios2_qsys_0.v(3102): conditional expression evaluates to a constant File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v Line: 3102
+Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(316): conditional expression evaluates to a constant File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_sdram.v Line: 316
+Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(326): conditional expression evaluates to a constant File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_sdram.v Line: 326
+Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(336): conditional expression evaluates to a constant File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_sdram.v Line: 336
+Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(680): conditional expression evaluates to a constant File: C:/Lab8_provided/nios_system/synthesis/submodules/nios_system_sdram.v Line: 680
+Info (12127): Elaborating entity "final_project" for the top level hierarchy
+Warning (10858): Verilog HDL warning at final_project.sv(88): object debug used but never assigned File: C:/Lab8_provided/final_project.sv Line: 88
+Error (10897): SystemVerilog error at final_project.sv(146): can't implicitly connect port "vid_address" on instance "mu" of module "mem_unit" - matching object in present scope does not have an equivalent data type File: C:/Lab8_provided/final_project.sv Line: 146
+Error (10784): HDL error at memunit.sv(10): see declaration for object "vid_address" File: C:/Lab8_provided/memunit.sv Line: 10
+Error (10784): HDL error at final_project.sv(132): see declaration for object "vid_address" File: C:/Lab8_provided/final_project.sv Line: 132
+Error (10052): Verilog HDL error at final_project.sv(149): can't find port "vpos" File: C:/Lab8_provided/final_project.sv Line: 149
+Error (12153): Can't elaborate top-level user hierarchy
+Info (144001): Generated suppressed messages file C:/Lab8_provided/lab8.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 5 errors, 15 warnings
+    Error: Peak virtual memory: 825 megabytes
+    Error: Processing ended: Fri Apr 29 14:59:34 2016
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:23
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Lab8_provided/lab8.map.smsg.
+
+

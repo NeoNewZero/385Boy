@@ -1,0 +1,15 @@
+# system info nios_system on 2016.04.21.19:29:43
+system_info:
+name,value
+DEVICE,EP4CE115F29C7
+DEVICE_FAMILY,Cyclone IV E
+GENERATION_ID,1461288577
+#
+#
+# Files generated for nios_system on 2016.04.21.19:29:43
+files:
+filepath,kind,attributes,module,is_top
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module

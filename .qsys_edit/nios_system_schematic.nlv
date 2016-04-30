@@ -1,0 +1,62 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios_system.addr -pg 1 -lvl 7 -y 260
+preplace inst nios_system.vga_controller -pg 1 -lvl 5 -y 840
+preplace inst nios_system.pixel_buffer_dma -pg 1 -lvl 1 -y 500
+preplace inst nios_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios_system.rgb_resampler -pg 1 -lvl 4 -y 500
+preplace inst nios_system.ready -pg 1 -lvl 7 -y 680
+preplace inst nios_system.onchip_memory -pg 1 -lvl 5 -y 1040
+preplace inst nios_system.leds -pg 1 -lvl 5 -y 1330
+preplace inst nios_system.data_out -pg 1 -lvl 7 -y 460
+preplace inst nios_system.data_in -pg 1 -lvl 7 -y 880
+preplace inst nios_system.video_pll_0 -pg 1 -lvl 3 -y 770
+preplace inst nios_system.nios2_qsys_0 -pg 1 -lvl 6 -y 40
+preplace inst nios_system.sys_sdram_pll_0.sys_pll -pg 1
+preplace inst nios_system.video_fifo -pg 1 -lvl 4 -y 740
+preplace inst nios_system.sys_sdram_pll_0 -pg 1 -lvl 5 -y 520
+preplace inst nios_system.mem_rw_pio -pg 1 -lvl 7 -y 140
+preplace inst nios_system.r -pg 1 -lvl 7 -y 560
+preplace inst nios_system.sys_sdram_pll_0.reset_from_locked -pg 1
+preplace inst nios_system.gameboy_clk -pg 1 -lvl 3 -y 540
+preplace inst nios_system.buttons -pg 1 -lvl 5 -y 40
+preplace inst nios_system.scaler -pg 1 -lvl 5 -y 710
+preplace inst nios_system.video_pll_0.video_pll -pg 1
+preplace inst nios_system.timer_0 -pg 1 -lvl 7 -y 360
+preplace inst nios_system.switches -pg 1 -lvl 5 -y 1220
+preplace inst nios_system.sdram -pg 1 -lvl 5 -y 1120
+preplace inst nios_system.pixel_buffer -pg 1 -lvl 5 -y 940
+preplace inst nios_system.jtag_uart -pg 1 -lvl 5 -y 300
+preplace inst nios_system.w -pg 1 -lvl 7 -y 780
+preplace inst nios_system.video_pll_0.reset_from_locked -pg 1
+preplace inst nios_system.clk_0 -pg 1 -lvl 2 -y 720
+preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)mem_rw_pio.irq,(MASTER)nios2_qsys_0.d_irq,(SLAVE)jtag_uart.irq,(SLAVE)timer_0.irq) 1 4 3 1750 270 NJ 350 2550
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)nios_system.reset) 1 0 2 NJ 750 NJ
+preplace netloc FAN_OUT<net_container>nios_system</net_container>(MASTER)video_pll_0.vga_clk,(SLAVE)video_fifo.clock_stream_out,(SLAVE)vga_controller.clk) 1 3 2 1200 870 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.mem_rw,(SLAVE)mem_rw_pio.external_connection) 1 0 7 NJ 70 NJ 70 NJ 70 NJ 70 NJ 30 NJ 30 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.buttons,(SLAVE)buttons.external_interface) 1 0 5 NJ 90 NJ 90 NJ 90 NJ 90 NJ
+preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(SLAVE)timer_0.clk,(MASTER)gameboy_clk.clk) 1 3 4 NJ 610 NJ 620 NJ 620 2390
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.vga_controller,(SLAVE)vga_controller.external_interface) 1 0 5 NJ 890 NJ 890 NJ 890 NJ 890 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.addr,(SLAVE)addr.external_connection) 1 0 7 NJ 230 NJ 230 NJ 230 NJ 230 NJ 230 NJ 290 NJ
+preplace netloc FAN_OUT<net_container>nios_system</net_container>(MASTER)clk_0.clk,(SLAVE)sys_sdram_pll_0.ref_clk,(SLAVE)video_pll_0.ref_clk) 1 2 3 860 490 NJ 490 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(MASTER)nios_system.sdram_clk,(MASTER)sys_sdram_pll_0.sdram_clk) 1 5 3 NJ 550 NJ 670 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.leds,(SLAVE)leds.external_connection) 1 0 5 NJ 1360 NJ 1360 NJ 1360 NJ 1360 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.data_in,(SLAVE)data_in.external_connection) 1 0 7 NJ 690 NJ 690 NJ 690 NJ 670 NJ 680 NJ 910 NJ
+preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)scaler.clk,(SLAVE)jtag_uart.clk,(SLAVE)buttons.clk,(SLAVE)rgb_resampler.clk,(SLAVE)r.clk,(SLAVE)w.clk,(SLAVE)sdram.clk,(SLAVE)pixel_buffer.clk,(SLAVE)data_in.clk,(SLAVE)nios2_qsys_0.clk,(SLAVE)pixel_buffer_dma.clk,(SLAVE)addr.clk,(SLAVE)ready.clk,(SLAVE)leds.clk,(SLAVE)video_fifo.clock_stream_in,(SLAVE)onchip_memory.clk1,(MASTER)sys_sdram_pll_0.sys_clk,(SLAVE)switches.clk,(SLAVE)data_out.clk,(SLAVE)mem_rw_pio.clk) 1 0 7 130 490 NJ 490 NJ 510 1200 690 1630 290 2080 570 2530
+preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(SLAVE)scaler.avalon_scaler_sink,(MASTER)rgb_resampler.avalon_rgb_source) 1 4 1 1750
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.ready,(SLAVE)ready.external_connection) 1 0 7 NJ 650 NJ 610 NJ 610 NJ 630 NJ 640 NJ 640 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.sram,(SLAVE)pixel_buffer.external_interface) 1 0 5 NJ 990 NJ 990 NJ 990 NJ 990 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.data_out,(SLAVE)data_out.external_connection) 1 0 7 NJ 450 NJ 450 NJ 450 NJ 450 NJ 450 NJ 450 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.w,(SLAVE)w.external_connection) 1 0 7 NJ 670 NJ 650 NJ 650 NJ 650 NJ 660 NJ 660 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)r.external_connection,(SLAVE)nios_system.r) 1 0 7 NJ 470 NJ 470 NJ 470 NJ 470 NJ 470 NJ 470 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)sdram.wire,(SLAVE)nios_system.sdram_wire) 1 0 5 NJ 1190 NJ 1190 NJ 1190 NJ 1190 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)gameboy_clk.clk_in,(SLAVE)nios_system.gameboy_clk) 1 0 3 NJ 630 NJ 570 NJ
+preplace netloc INTERCONNECT<net_container>nios_system</net_container>(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)timer_0.s1,(SLAVE)sdram.s1,(MASTER)nios2_qsys_0.data_master,(SLAVE)data_out.s1,(SLAVE)switches.s1,(SLAVE)addr.s1,(SLAVE)w.s1,(MASTER)pixel_buffer_dma.avalon_pixel_dma_master,(SLAVE)ready.s1,(SLAVE)onchip_memory.s1,(MASTER)nios2_qsys_0.instruction_master,(SLAVE)buttons.avalon_parallel_port_slave,(SLAVE)leds.s1,(SLAVE)nios2_qsys_0.jtag_debug_module,(SLAVE)pixel_buffer.avalon_sram_slave,(SLAVE)mem_rw_pio.s1,(SLAVE)pixel_buffer_dma.avalon_control_slave,(SLAVE)r.s1,(SLAVE)data_in.s1) 1 0 7 150 590 550 530 NJ 530 NJ 590 1690 250 2120 330 2450
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.switches,(SLAVE)switches.external_connection) 1 0 5 NJ 1250 NJ 1250 NJ 1250 NJ 1250 NJ
+preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(SLAVE)video_fifo.avalon_dc_buffer_sink,(MASTER)scaler.avalon_scaler_source) 1 3 3 1300 730 NJ 700 2080
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)clk_0.clk_in,(SLAVE)nios_system.clk) 1 0 2 NJ 730 NJ
+preplace netloc INTERCONNECT<net_container>nios_system</net_container>(SLAVE)switches.reset,(SLAVE)data_in.reset,(SLAVE)addr.reset,(SLAVE)ready.reset,(SLAVE)nios2_qsys_0.reset_n,(SLAVE)video_fifo.reset_stream_in,(SLAVE)gameboy_clk.clk_in_reset,(SLAVE)scaler.reset,(SLAVE)jtag_uart.reset,(SLAVE)r.reset,(SLAVE)w.reset,(MASTER)nios2_qsys_0.jtag_debug_module_reset,(SLAVE)sys_sdram_pll_0.ref_reset,(SLAVE)data_out.reset,(SLAVE)pixel_buffer.reset,(SLAVE)pixel_buffer_dma.reset,(SLAVE)sdram.reset,(SLAVE)timer_0.reset,(SLAVE)mem_rw_pio.reset,(SLAVE)onchip_memory.reset1,(SLAVE)video_fifo.reset_stream_out,(MASTER)clk_0.clk_reset,(SLAVE)rgb_resampler.reset,(SLAVE)buttons.reset,(SLAVE)leds.reset,(SLAVE)video_pll_0.ref_reset,(SLAVE)vga_controller.reset) 1 0 7 170 610 NJ 550 880 730 1280 710 1710 150 2140 310 2430
+preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(SLAVE)rgb_resampler.avalon_rgb_sink,(MASTER)pixel_buffer_dma.avalon_pixel_source) 1 1 3 NJ 630 NJ 630 1220
+preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(MASTER)video_fifo.avalon_dc_buffer_source,(SLAVE)vga_controller.avalon_vga_sink) 1 4 1 1610
+levelinfo -pg 1 0 100 2840
+levelinfo -hier nios_system 110 200 670 1010 1330 1870 2170 2600 2750

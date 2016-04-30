@@ -1,0 +1,15 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/SubBytes.sv}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/InvMixColumns.sv}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/aes_controller.sv}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/invShiftRows.sv}
+vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/KeyExpansion.sv}
+vlib lab7_sos
+vmap lab7_sos lab7_sos
+

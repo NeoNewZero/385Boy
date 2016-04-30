@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="335" />
+   <irq preferredWidth="34" />
+   <inputclock preferredWidth="215" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Processors and Peripherals,Project,Library,Library/Processors and Peripherals/Peripherals" />
+ <window width="1440" height="860" x="0" y="0" />
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="388" />
+   <clocksource preferredWidth="388" />
+   <frequency preferredWidth="368" />
+  </columns>
+ </clocktable>
+</preferences>

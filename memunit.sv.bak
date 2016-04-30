@@ -1,0 +1,129 @@
+module mem_unit(
+	input logic clk,
+	input logic z80_mreq_n,
+	input logic z80_read_n,
+	input logic z80_write_n,
+	input logic [15:0] z80_address,
+	input logic [7:0] z80_dout,
+	output logic [7:0] z80_din,
+	output logic z80_wait_n,
+	input logic nios_ready,
+	input logic [7:0] nios_dout,
+	output logic nios_read,
+	output logic nios_write,
+	output logic nios_memory_irq,
+	output logic [7:0] nios_din,
+	output logic [15:0] nios_address,
+	output logic [3:0] debug,
+	input logic m1_n,
+	input logic Reset
+	
+);
+enum logic [2:0] { IDLE, MEM_R,MEM_W, MEM_RESP}
+							state, next_state;
+logic [7:0] curData;
+logic [7:0] nextData;
+logic [15:0] curAddress;
+logic [15:0] nextAddress;
+assign nios_address = curAddress;
+assign nios_din = curData;
+assign z80_din = curData;
+always_comb
+begin
+	z80_wait_n = 1'b1;
+	nios_read = 1'b0;
+	nios_write = 1'b0;
+	nios_memory_irq = 1'b0;
+	debug = 4'b1111;
+		case(state)
+		IDLE:
+		begin
+				
+		end
+		MEM_R:
+		begin
+			debug = 4'b0010;
+			nios_memory_irq = 1'b1;
+			nios_read=1'b1;
+			z80_wait_n = 1'b0;
+			
+		end
+		MEM_W:
+		begin
+			nios_memory_irq = 1'b1;
+			debug = 4'b0100;
+			nios_write = 1'b1;
+			z80_wait_n = 1'b0;
+		end
+		MEM_RESP:
+		begin
+			nios_memory_irq = 1'b1;
+			debug = 4'b1000;
+			z80_wait_n = 1'b0;
+		end
+	endcase
+end
+ 
+always_comb  //next state logic
+begin
+	next_state = state;
+	nextAddress = curAddress;
+	nextData = curData;
+case(state)
+		IDLE:
+		begin
+			if(z80_mreq_n == 1'b0)
+				begin
+					nextAddress = z80_address; //store address to access
+					if(z80_read_n==1'b0)
+						begin
+							next_state = MEM_R;
+						end
+					else if(z80_write_n==1'b0)
+						begin
+							nextData = z80_din;
+							next_state = MEM_W;
+						end
+				end
+		end
+		MEM_R:
+		begin
+			if(nios_ready)
+				begin
+					nextData = nios_dout;
+					next_state = MEM_RESP;
+				end
+		end
+		MEM_W:
+		begin
+			if(nios_ready)
+				begin
+					next_state = MEM_RESP;
+				end
+		end
+		MEM_RESP:
+		begin
+			if(~nios_ready)
+				next_state = IDLE;
+		end
+	endcase
+end
+
+
+always_ff @ (posedge clk or posedge Reset )
+    begin 
+        if (Reset) 
+			begin
+				state <= IDLE;
+				curAddress <= 16'd0;
+				curData <= 8'd0;
+				end
+        else
+				begin
+				state <= next_state;
+				curAddress <= nextAddress;
+				curData <= nextData;
+				end
+    end
+   
+endmodule

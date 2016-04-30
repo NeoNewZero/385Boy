@@ -1,0 +1,471 @@
+IP Upgrade report for lab8
+Thu Apr 21 19:29:56 2016
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Failed Upgrade IP Components
+  4. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; IP Upgrade Summary                                                         ;
++------------------------------+---------------------------------------------+
+; IP Components Upgrade Status ; Passed - Thu Apr 21 19:29:56 2016           ;
+; Quartus Prime Version        ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name                ; lab8                                        ;
+; Top-level Entity Name        ; final_project                               ;
+; Family                       ; Cyclone IV E                                ;
++------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Failed Upgrade IP Components                                                                                                                                           ;
++-------------+----------------+---------+---------------------------------------+----------------------+-----------------+----------------------------------------------+
+; Entity Name ; Component Name ; Version ; Original Source File                  ; Generation File Path ; New Source File ; Message                                      ;
++-------------+----------------+---------+---------------------------------------+----------------------+-----------------+----------------------------------------------+
+; nios_system ; Qsys           ; 13.0sp1 ; nios_system/synthesis/nios_system.qip ; nios_system.qsys     ;                 ; Error upgrading Qsys file "nios_system.qsys" ;
++-------------+----------------+---------+---------------------------------------+----------------------+-----------------+----------------------------------------------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Info (11902): Backing up file "nios_system.qsys" to "nios_system.BAK.qsys"
+Info (11902): Backing up file "nios_system/synthesis/nios_system.v" to "nios_system.BAK.v"
+Info (11837): Started upgrading IP component Qsys with file "nios_system.qsys"
+Info: 2016.04.21.19:29:28 Info: Starting to upgrade the IP cores in the Qsys system
+Info: 2016.04.21.19:29:28 Info: Upgrading from core type Nios II (Classic) Processor with version 15.1 to core type Nios II Processor with version 15.1
+Info: 2016.04.21.19:29:28 Info: Migration Successful
+Info: 2016.04.21.19:29:28 Info: Finished upgrading the ip cores
+Info: 2016.04.21.19:29:36 Info: Saving generation log to C:/Lab8_provided/nios_system
+Info: 2016.04.21.19:29:36 Info: Starting: Create simulation model
+Info: 2016.04.21.19:29:36 Info: qsys-generate C:\Lab8_provided\nios_system.qsys --simulation=VERILOG --output-directory=C:\Lab8_provided\nios_system\simulation --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: 2016.04.21.19:29:36 Info: Loading Lab8_provided
+Info: 2016.04.21.19:29:36 Info: Reading input file
+Info: 2016.04.21.19:29:36 Info: Adding alpha_blender [altera_up_avalon_video_alpha_blender 15.1]
+Info: 2016.04.21.19:29:36 Info: Parameterizing module alpha_blender
+Info: 2016.04.21.19:29:36 Info: Adding buttons [altera_up_avalon_parallel_port 15.1]
+Info: 2016.04.21.19:29:36 Info: Parameterizing module buttons
+Info: 2016.04.21.19:29:36 Info: Adding char_drawer [altera_up_avalon_video_character_buffer_with_dma 15.1]
+Info: 2016.04.21.19:29:36 Info: Parameterizing module char_drawer
+Info: 2016.04.21.19:29:36 Info: Adding clk_0 [clock_source 15.1]
+Info: 2016.04.21.19:29:36 Info: Parameterizing module clk_0
+Info: 2016.04.21.19:29:36 Info: Adding clk_1 [clock_source 15.1]
+Info: 2016.04.21.19:29:36 Info: Parameterizing module clk_1
+Info: 2016.04.21.19:29:36 Info: Adding clocks [altera_up_clocks 13.0]
+Warning: 2016.04.21.19:29:36 Warning: clocks: Component type altera_up_clocks is not in the library
+Info: 2016.04.21.19:29:36 Info: Parameterizing module clocks
+Info: 2016.04.21.19:29:36 Info: Adding hw_only_clk [altera_avalon_timer 15.1]
+Info: 2016.04.21.19:29:36 Info: Parameterizing module hw_only_clk
+Info: 2016.04.21.19:29:36 Info: Adding jtag_uart [altera_avalon_jtag_uart 15.1]
+Info: 2016.04.21.19:29:36 Info: Parameterizing module jtag_uart
+Info: 2016.04.21.19:29:36 Info: Adding leds [altera_avalon_pio 15.1]
+Info: 2016.04.21.19:29:36 Info: Parameterizing module leds
+Info: 2016.04.21.19:29:36 Info: Adding nios2_processor [altera_nios2_gen2 15.1]
+Info: 2016.04.21.19:29:36 Info: Parameterizing module nios2_processor
+Info: 2016.04.21.19:29:36 Info: Adding onchip_memory [altera_avalon_onchip_memory2 15.1]
+Info: 2016.04.21.19:29:36 Info: Parameterizing module onchip_memory
+Info: 2016.04.21.19:29:36 Info: Adding pixel_buffer [altera_up_avalon_sram 15.1]
+Info: 2016.04.21.19:29:36 Info: Parameterizing module pixel_buffer
+Info: 2016.04.21.19:29:36 Info: Adding pixel_buffer_dma [altera_up_avalon_video_pixel_buffer_dma 15.1]
+2016.04.21.19:29:36 Info: Parameterizing module pixel_buffer_dma
+2016.04.21.19:29:36 Info: Adding rgb_resampler [altera_up_avalon_video_rgb_resampler 15.1]
+2016.04.21.19:29:36 Info: Parameterizing module rgb_resampler
+2016.04.21.19:29:36 Info: Adding scaler [altera_up_avalon_video_scaler 15.1]
+2016.04.21.19:29:36 Info: Parameterizing module scaler
+2016.04.21.19:29:36 Info: Adding sdram [altera_avalon_new_sdram_controller 15.1]
+2016.04.21.19:29:36 Info: Parameterizing module sdram
+2016.04.21.19:29:36 Info: Adding switches [altera_avalon_pio 15.1]
+2016.04.21.19:29:36 Info: Parameterizing module switches
+2016.04.21.19:29:36 Info: Adding sys_clk [altera_avalon_timer 15.1]
+2016.04.21.19:29:36 Info: Parameterizing module sys_clk
+2016.04.21.19:29:36 Info: Adding timestamp_clk [altera_avalon_timer 15.1]
+2016.04.21.19:29:36 Info: Parameterizing module timestamp_clk
+2016.04.21.19:29:36 Info: Adding vga_controller [altera_up_avalon_video_vga_controller 15.1]
+2016.04.21.19:29:36 Info: Parameterizing module vga_controller
+2016.04.21.19:29:36 Info: Adding video_fifo [altera_up_avalon_video_dual_clock_buffer 15.1]
+2016.04.21.19:29:36 Info: Parameterizing module video_fifo
+2016.04.21.19:29:36 Info: Building connections
+2016.04.21.19:29:36 Info: Parameterizing connections
+Info: 2016.04.21.19:29:36 Info: Validating
+Info: 2016.04.21.19:29:37 Info: Done reading input file
+Info: 2016.04.21.19:29:37 Info: nios_system.char_drawer: Character Resolution: 80 x 60
+Error: 2016.04.21.19:29:37 Error: nios_system.clocks: Component altera_up_clocks 13.0 not found or could not be instantiated
+Warning: 2016.04.21.19:29:37 Warning: nios_system.hw_only_clk: Period validation cannot be done because input clock is unknown.
+Warning: 2016.04.21.19:29:37 Warning: nios_system.jtag_uart: Jtag Uart input clock need to be at least 50Mhz to operate properly
+Info: 2016.04.21.19:29:37 Info: nios_system.rgb_resampler: RGB Resampling: 16 (bits) x 1 (planes) -> 10 (bits) x 3 (planes)
+Info: 2016.04.21.19:29:37 Info: nios_system.scaler: Change in Resolution: 320 x 240 -> 640 x 480
+Info: 2016.04.21.19:29:37 Info: nios_system.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: 2016.04.21.19:29:37 Warning: nios_system.sys_clk: Period validation cannot be done because input clock is unknown.
+Warning: 2016.04.21.19:29:37 Warning: nios_system.timestamp_clk: Period validation cannot be done because input clock is unknown.
+Warning: 2016.04.21.19:29:37 Warning: nios_system.vga_controller: Unable to verify clock frequency. Make sure the VGA clock has a frequency of 25.0 MHz.
+Info: 2016.04.21.19:29:37 Info: nios_system.vga_controller: Video Output Stream: Format: 640 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Error: 2016.04.21.19:29:37 Error: nios_system.video_fifo: video_fifo.reset_stream_out must be connected to a reset source
+Info: 2016.04.21.19:29:38 Info: nios_system: Generating nios_system "nios_system" for SIM_VERILOG
+Error: 2016.04.21.19:29:38 Error: pixel_buffer_dma_avalon_pixel_dma_master_translator.avalon_anti_master_0: Cannot connect pixel_buffer_dma_avalon_pixel_dma_master_translator.reset because pixel_buffer_dma.reset is not connected. If pixel_buffer_dma.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Error: 2016.04.21.19:29:38 Error: pixel_buffer_avalon_sram_slave_translator.avalon_anti_slave_0: Cannot connect pixel_buffer_avalon_sram_slave_translator.reset because pixel_buffer.reset is not connected. If pixel_buffer.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Error: 2016.04.21.19:29:38 Error: char_drawer_avalon_char_buffer_slave_translator.avalon_anti_slave_0: Cannot connect char_drawer_avalon_char_buffer_slave_translator.reset because char_drawer.reset is not connected. If char_drawer.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Error: 2016.04.21.19:29:38 Error: char_drawer_avalon_char_control_slave_translator.avalon_anti_slave_0: Cannot connect char_drawer_avalon_char_control_slave_translator.reset because char_drawer.reset is not connected. If char_drawer.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Error: 2016.04.21.19:29:38 Error: pixel_buffer_dma_avalon_control_slave_translator.avalon_anti_slave_0: Cannot connect pixel_buffer_dma_avalon_control_slave_translator.reset because pixel_buffer_dma.reset is not connected. If pixel_buffer_dma.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Error: 2016.04.21.19:29:39 Error: buttons_avalon_parallel_port_slave_translator.avalon_anti_slave_0: Cannot connect buttons_avalon_parallel_port_slave_translator.reset because buttons.reset is not connected. If buttons.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Warning: 2016.04.21.19:29:41 Warning: nios2_processor.irq: Cannot connect clock for irq_mapper.sender
+Error: 2016.04.21.19:29:41 Error: Cannot find clock for hw_only_clk.clk. If hw_only_clk.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller in the generated RTL.
+Error: 2016.04.21.19:29:41 Error: Cannot find clock for jtag_uart.clk. If jtag_uart.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_001, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_001 in the generated RTL.
+Error: 2016.04.21.19:29:41 Error: Cannot find clock for leds.clk. If leds.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_002, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_002 in the generated RTL.
+Error: 2016.04.21.19:29:41 Error: Cannot find clock for nios2_processor.clk. If nios2_processor.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_003, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_003 in the generated RTL.
+Error: 2016.04.21.19:29:41 Error: Cannot find clock for onchip_memory.clk1. If onchip_memory.clk1 is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_004, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_004 in the generated RTL.
+Error: 2016.04.21.19:29:41 Error: Cannot find clock for sdram.clk. If sdram.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_005, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_005 in the generated RTL.
+Error: 2016.04.21.19:29:41 Error: Cannot find clock for switches.clk. If switches.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_006, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_006 in the generated RTL.
+Error: 2016.04.21.19:29:41 Error: Cannot find clock for sys_clk.clk. If sys_clk.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_007, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_007 in the generated RTL.
+Error: 2016.04.21.19:29:41 Error: Cannot find clock for timestamp_clk.clk. If timestamp_clk.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_008, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_008 in the generated RTL.
+Error: 2016.04.21.19:29:41 Error: Cannot find clock for irq_mapper.clk. If irq_mapper.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_009, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_009 in the generated RTL.
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_0:clk:clk_out (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_1:clk:clk_out (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for sdram:clk:clk (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for jtag_uart:clk:clk (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for leds:clk:clk (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for switches:clk:clk (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for nios2_processor:clk:clk (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for sys_clk:clk:clk (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for timestamp_clk:clk:clk (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for hw_only_clk:clk:clk (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for onchip_memory:clk1:clk (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for video_fifo:clock_stream_in:clk_stream_in (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for video_fifo:clock_stream_out:clk_stream_out (clk)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+Warning: 2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:43 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+com.altera.hdlwriter.EntityWritingException: Connection  is not connected pixel_buffer_dma:avalon_pixel_dma_master -> ?
+Info:     at com.altera.hdlwriter.internal.OldEntityWriterInternal.addConnection(OldEntityWriterInternal.java:431)
+Info:     at com.altera.hdlwriter.internal.OldEntityWriterInternal.writeHDLInternal(OldEntityWriterInternal.java:122)
+Info:     at com.altera.hdlwriter.internal.EntityWriter.writeHDL(EntityWriter.java:40)
+Info:     at com.altera.sopc.generator.EnsembleGenerationFileSet2.generate(EnsembleGenerationFileSet2.java:61)
+Info:     at com.altera.sopc.generator.FileSet2.generate(FileSet2.java:150)
+Info:     at com.altera.sopc.generator.Sellafield.generate(Sellafield.java:366)
+Info:     at com.altera.sopcmodel.sbtools.sbgenerate.SbGenerate.performGeneration(SbGenerate.java:518)
+Info:     at com.altera.sopcmodel.sbtools.sbgenerate.SbGenerate.act(SbGenerate.java:464)
+Info:     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:718)
+Info:     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:730)
+Info:     at com.altera.sopceditor.tools.generation.QsysGenerationTask.generateSimulation(QsysGenerationTask.java:495)
+Info:     at com.altera.sopceditor.tools.generation.QsysGenerationTask.generate(QsysGenerationTask.java:288)
+Info:     at com.altera.sopceditor.tools.generation.QsysGenerationTask.run(QsysGenerationTask.java:127)
+Info:     at com.altera.qsys.generate.QsysGenerate.createGenerationTaskOuter(QsysGenerate.java:617)
+Info:     at com.altera.qsys.generate.QsysGenerate.runGenerationFlow(QsysGenerate.java:546)
+Info:     at com.altera.qsys.generate.QsysGenerate.act(QsysGenerate.java:339)
+Info:     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:718)
+Info:     at com.altera.qsys.generate.QsysGenerate.main(QsysGenerate.java:159)
+Error: 2016.04.21.19:29:43 Info: nios_system: Done "nios_system" with 1 modules, 0 files
+2016.04.21.19:29:43 Error: qsys-generate failed with exit code 1: 63 Errors, 42 Warnings
+2016.04.21.19:29:43 Info: Finished: Create simulation model
+2016.04.21.19:29:43 Info: Starting: Create Modelsim Project.
+2016.04.21.19:29:43 Info: sim-script-gen --spd=C:\Lab8_provided\nios_system\nios_system.spd --output-directory=C:/Lab8_provided/nios_system/simulation/ --use-relative-paths=true
+2016.04.21.19:29:43 Info: Doing: ip-make-simscript --spd=C:\Lab8_provided\nios_system\nios_system.spd --output-directory=C:/Lab8_provided/nios_system/simulation
+Info: 2016.04.21.19:29:47 Info: Generating the following file(s) for MODELSIM simulator in C:/Lab8_provided/nios_system/simulation
+Info: 2016.04.21.19:29:47 Info:     mentor
+Info: 2016.04.21.19:29:47 Info: Generating the following file(s) for VCS simulator in C:/Lab8_provided/nios_system/simulation
+Info: 2016.04.21.19:29:47 Info:     synopsys/vcs
+Info: 2016.04.21.19:29:47 Info: Generating the following file(s) for VCSMX simulator in C:/Lab8_provided/nios_system/simulation
+Info: 2016.04.21.19:29:47 Info:     synopsys/vcsmx
+Info: 2016.04.21.19:29:47 Info:     synopsys/vcsmx
+Info: 2016.04.21.19:29:47 Info: Generating the following file(s) for NCSIM simulator in C:/Lab8_provided/nios_system/simulation
+Info: 2016.04.21.19:29:47 Info:     cadence
+Info: 2016.04.21.19:29:47 Info:     cadence
+Info: 2016.04.21.19:29:47 Info:     cadence
+Info: 2016.04.21.19:29:47 Info: Generating the following file(s) for RIVIERA simulator in C:/Lab8_provided/nios_system/simulation
+Info: 2016.04.21.19:29:47 Info:     aldec
+Info: 2016.04.21.19:29:47 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Lab8_provided/nios_system/simulation
+Info: 2016.04.21.19:29:47 Info: Finished: Create Modelsim Project.
+Info: 2016.04.21.19:29:47 Info: Starting: Create block symbol file (.bsf)
+Info: 2016.04.21.19:29:47 Info: qsys-generate C:\Lab8_provided\nios_system.qsys --block-symbol-file --output-directory=C:\Lab8_provided\nios_system --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: 2016.04.21.19:29:47 Info: Loading Lab8_provided
+Info: 2016.04.21.19:29:47 Info: Reading input file
+Info: 2016.04.21.19:29:47 Info: Adding alpha_blender [altera_up_avalon_video_alpha_blender 15.1]
+Info: 2016.04.21.19:29:47 Info: Parameterizing module alpha_blender
+Info: 2016.04.21.19:29:47 Info: Adding buttons [altera_up_avalon_parallel_port 15.1]
+Info: 2016.04.21.19:29:47 Info: Parameterizing module buttons
+Info: 2016.04.21.19:29:47 Info: Adding char_drawer [altera_up_avalon_video_character_buffer_with_dma 15.1]
+Info: 2016.04.21.19:29:47 Info: Parameterizing module char_drawer
+Info: 2016.04.21.19:29:47 Info: Adding clk_0 [clock_source 15.1]
+Info: 2016.04.21.19:29:47 Info: Parameterizing module clk_0
+Info: 2016.04.21.19:29:47 Info: Adding clk_1 [clock_source 15.1]
+Info: 2016.04.21.19:29:47 Info: Parameterizing module clk_1
+Info: 2016.04.21.19:29:47 Info: Adding clocks [altera_up_clocks 13.0]
+Warning: 2016.04.21.19:29:47 Warning: clocks: Component type altera_up_clocks is not in the library
+Info: 2016.04.21.19:29:47 Info: Parameterizing module clocks
+Info: 2016.04.21.19:29:47 Info: Adding hw_only_clk [altera_avalon_timer 15.1]
+Info: 2016.04.21.19:29:47 Info: Parameterizing module hw_only_clk
+Info: 2016.04.21.19:29:47 Info: Adding jtag_uart [altera_avalon_jtag_uart 15.1]
+Info: 2016.04.21.19:29:47 Info: Parameterizing module jtag_uart
+Info: 2016.04.21.19:29:47 Info: Adding leds [altera_avalon_pio 15.1]
+Info: 2016.04.21.19:29:47 Info: Parameterizing module leds
+2016.04.21.19:29:47 Info: Adding nios2_processor [altera_nios2_gen2 15.1]
+2016.04.21.19:29:47 Info: Parameterizing module nios2_processor
+2016.04.21.19:29:47 Info: Adding onchip_memory [altera_avalon_onchip_memory2 15.1]
+2016.04.21.19:29:47 Info: Parameterizing module onchip_memory
+2016.04.21.19:29:47 Info: Adding pixel_buffer [altera_up_avalon_sram 15.1]
+2016.04.21.19:29:47 Info: Parameterizing module pixel_buffer
+2016.04.21.19:29:47 Info: Adding pixel_buffer_dma [altera_up_avalon_video_pixel_buffer_dma 15.1]
+2016.04.21.19:29:47 Info: Parameterizing module pixel_buffer_dma
+2016.04.21.19:29:47 Info: Adding rgb_resampler [altera_up_avalon_video_rgb_resampler 15.1]
+2016.04.21.19:29:47 Info: Parameterizing module rgb_resampler
+2016.04.21.19:29:47 Info: Adding scaler [altera_up_avalon_video_scaler 15.1]
+2016.04.21.19:29:47 Info: Parameterizing module scaler
+2016.04.21.19:29:47 Info: Adding sdram [altera_avalon_new_sdram_controller 15.1]
+2016.04.21.19:29:47 Info: Parameterizing module sdram
+2016.04.21.19:29:47 Info: Adding switches [altera_avalon_pio 15.1]
+2016.04.21.19:29:47 Info: Parameterizing module switches
+2016.04.21.19:29:47 Info: Adding sys_clk [altera_avalon_timer 15.1]
+2016.04.21.19:29:47 Info: Parameterizing module sys_clk
+2016.04.21.19:29:47 Info: Adding timestamp_clk [altera_avalon_timer 15.1]
+2016.04.21.19:29:47 Info: Parameterizing module timestamp_clk
+2016.04.21.19:29:47 Info: Adding vga_controller [altera_up_avalon_video_vga_controller 15.1]
+2016.04.21.19:29:47 Info: Parameterizing module vga_controller
+2016.04.21.19:29:47 Info: Adding video_fifo [altera_up_avalon_video_dual_clock_buffer 15.1]
+2016.04.21.19:29:47 Info: Parameterizing module video_fifo
+2016.04.21.19:29:47 Info: Building connections
+2016.04.21.19:29:47 Info: Parameterizing connections
+2016.04.21.19:29:47 Info: Validating
+Info: 2016.04.21.19:29:47 Info: Done reading input file
+Info: 2016.04.21.19:29:48 Info: nios_system.char_drawer: Character Resolution: 80 x 60
+Error: 2016.04.21.19:29:48 Error: nios_system.clocks: Component altera_up_clocks 13.0 not found or could not be instantiated
+Warning: 2016.04.21.19:29:48 Warning: nios_system.hw_only_clk: Period validation cannot be done because input clock is unknown.
+Warning: 2016.04.21.19:29:48 Warning: nios_system.jtag_uart: Jtag Uart input clock need to be at least 50Mhz to operate properly
+Info: 2016.04.21.19:29:48 Info: nios_system.rgb_resampler: RGB Resampling: 16 (bits) x 1 (planes) -> 10 (bits) x 3 (planes)
+Info: 2016.04.21.19:29:48 Info: nios_system.scaler: Change in Resolution: 320 x 240 -> 640 x 480
+Info: 2016.04.21.19:29:48 Info: nios_system.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: 2016.04.21.19:29:48 Warning: nios_system.sys_clk: Period validation cannot be done because input clock is unknown.
+Warning: 2016.04.21.19:29:48 Warning: nios_system.timestamp_clk: Period validation cannot be done because input clock is unknown.
+Warning: 2016.04.21.19:29:48 Warning: nios_system.vga_controller: Unable to verify clock frequency. Make sure the VGA clock has a frequency of 25.0 MHz.
+Info: 2016.04.21.19:29:48 Info: nios_system.vga_controller: Video Output Stream: Format: 640 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Error: 2016.04.21.19:29:48 Error: nios_system.alpha_blender: alpha_blender.clk must be connected to a clock output
+Error: 2016.04.21.19:29:48 Error: nios_system.buttons: buttons.clk must be connected to a clock output
+Error: 2016.04.21.19:29:48 Error: nios_system.char_drawer: char_drawer.clk must be connected to a clock output
+2016.04.21.19:29:48 Error: nios_system.pixel_buffer: pixel_buffer.clk must be connected to a clock output
+2016.04.21.19:29:48 Error: nios_system.pixel_buffer_dma: pixel_buffer_dma.clk must be connected to a clock output
+2016.04.21.19:29:48 Error: nios_system.rgb_resampler: rgb_resampler.clk must be connected to a clock output
+2016.04.21.19:29:48 Error: nios_system.scaler: scaler.clk must be connected to a clock output
+2016.04.21.19:29:48 Error: nios_system.vga_controller: vga_controller.clk must be connected to a clock output
+2016.04.21.19:29:48 Error: nios_system.alpha_blender: alpha_blender.reset must be connected to a reset source
+2016.04.21.19:29:48 Error: nios_system.buttons: buttons.reset must be connected to a reset source
+2016.04.21.19:29:48 Error: nios_system.char_drawer: char_drawer.reset must be connected to a reset source
+2016.04.21.19:29:48 Error: nios_system.pixel_buffer: pixel_buffer.reset must be connected to a reset source
+2016.04.21.19:29:48 Error: nios_system.pixel_buffer_dma: pixel_buffer_dma.reset must be connected to a reset source
+2016.04.21.19:29:48 Error: nios_system.rgb_resampler: rgb_resampler.reset must be connected to a reset source
+2016.04.21.19:29:48 Error: nios_system.scaler: scaler.reset must be connected to a reset source
+2016.04.21.19:29:48 Error: nios_system.vga_controller: vga_controller.reset must be connected to a reset source
+2016.04.21.19:29:48 Error: nios_system.video_fifo: video_fifo.reset_stream_in must be connected to a reset source
+2016.04.21.19:29:48 Error: nios_system.video_fifo: video_fifo.reset_stream_out must be connected to a reset source
+Info: 2016.04.21.19:29:51 Info: qsys-generate succeeded.
+Info: 2016.04.21.19:29:51 Info: Finished: Create block symbol file (.bsf)
+Info: 2016.04.21.19:29:51 Info:
+Info: 2016.04.21.19:29:51 Info: Starting: Create HDL design files for synthesis
+Info: 2016.04.21.19:29:51 Info: qsys-generate C:\Lab8_provided\nios_system.qsys --synthesis=VERILOG --output-directory=C:\Lab8_provided\nios_system\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: 2016.04.21.19:29:51 Info: Loading Lab8_provided
+Info: 2016.04.21.19:29:51 Info: Reading input file
+Info: 2016.04.21.19:29:51 Info: Adding alpha_blender [altera_up_avalon_video_alpha_blender 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module alpha_blender
+Info: 2016.04.21.19:29:51 Info: Adding buttons [altera_up_avalon_parallel_port 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module buttons
+Info: 2016.04.21.19:29:51 Info: Adding char_drawer [altera_up_avalon_video_character_buffer_with_dma 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module char_drawer
+Info: 2016.04.21.19:29:51 Info: Adding clk_0 [clock_source 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module clk_0
+Info: 2016.04.21.19:29:51 Info: Adding clk_1 [clock_source 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module clk_1
+Info: 2016.04.21.19:29:51 Info: Adding clocks [altera_up_clocks 13.0]
+Warning: 2016.04.21.19:29:51 Warning: clocks: Component type altera_up_clocks is not in the library
+Info: 2016.04.21.19:29:51 Info: Parameterizing module clocks
+Info: 2016.04.21.19:29:51 Info: Adding hw_only_clk [altera_avalon_timer 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module hw_only_clk
+Info: 2016.04.21.19:29:51 Info: Adding jtag_uart [altera_avalon_jtag_uart 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module jtag_uart
+Info: 2016.04.21.19:29:51 Info: Adding leds [altera_avalon_pio 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module leds
+Info: 2016.04.21.19:29:51 Info: Adding nios2_processor [altera_nios2_gen2 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module nios2_processor
+Info: 2016.04.21.19:29:51 Info: Adding onchip_memory [altera_avalon_onchip_memory2 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module onchip_memory
+Info: 2016.04.21.19:29:51 Info: Adding pixel_buffer [altera_up_avalon_sram 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module pixel_buffer
+Info: 2016.04.21.19:29:51 Info: Adding pixel_buffer_dma [altera_up_avalon_video_pixel_buffer_dma 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module pixel_buffer_dma
+Info: 2016.04.21.19:29:51 Info: Adding rgb_resampler [altera_up_avalon_video_rgb_resampler 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module rgb_resampler
+Info: 2016.04.21.19:29:51 Info: Adding scaler [altera_up_avalon_video_scaler 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module scaler
+Info: 2016.04.21.19:29:51 Info: Adding sdram [altera_avalon_new_sdram_controller 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module sdram
+Info: 2016.04.21.19:29:51 Info: Adding switches [altera_avalon_pio 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module switches
+Info: 2016.04.21.19:29:51 Info: Adding sys_clk [altera_avalon_timer 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module sys_clk
+Info: 2016.04.21.19:29:51 Info: Adding timestamp_clk [altera_avalon_timer 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module timestamp_clk
+Info: 2016.04.21.19:29:51 Info: Adding vga_controller [altera_up_avalon_video_vga_controller 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module vga_controller
+Info: 2016.04.21.19:29:51 Info: Adding video_fifo [altera_up_avalon_video_dual_clock_buffer 15.1]
+Info: 2016.04.21.19:29:51 Info: Parameterizing module video_fifo
+Info: 2016.04.21.19:29:51 Info: Building connections
+Info: 2016.04.21.19:29:51 Info: Parameterizing connections
+Info: 2016.04.21.19:29:51 Info: Validating
+Info: 2016.04.21.19:29:52 Info: Done reading input file
+Info: 2016.04.21.19:29:52 Info: nios_system.char_drawer: Character Resolution: 80 x 60
+Error: 2016.04.21.19:29:52 Error: nios_system.clocks: Component altera_up_clocks 13.0 not found or could not be instantiated
+Warning: 2016.04.21.19:29:52 Warning: nios_system.hw_only_clk: Period validation cannot be done because input clock is unknown.
+Warning: 2016.04.21.19:29:52 Warning: nios_system.jtag_uart: Jtag Uart input clock need to be at least 50Mhz to operate properly
+Info: 2016.04.21.19:29:52 Info: nios_system.rgb_resampler: RGB Resampling: 16 (bits) x 1 (planes) -> 10 (bits) x 3 (planes)
+Info: 2016.04.21.19:29:52 Info: nios_system.scaler: Change in Resolution: 320 x 240 -> 640 x 480
+Info: 2016.04.21.19:29:52 Info: nios_system.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: 2016.04.21.19:29:52 Warning: nios_system.sys_clk: Period validation cannot be done because input clock is unknown.
+Warning: 2016.04.21.19:29:52 Warning: nios_system.timestamp_clk: Period validation cannot be done because input clock is unknown.
+Warning: 2016.04.21.19:29:52 Warning: nios_system.vga_controller: Unable to verify clock frequency. Make sure the VGA clock has a frequency of 25.0 MHz.
+Info: 2016.04.21.19:29:52 Info: nios_system.vga_controller: Video Output Stream: Format: 640 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Error: 2016.04.21.19:29:52 Error: nios_system.alpha_blender: alpha_blender.clk must be connected to a clock output
+Error: 2016.04.21.19:29:52 Error: nios_system.buttons: buttons.clk must be connected to a clock output
+Error: 2016.04.21.19:29:52 Error: nios_system.char_drawer: char_drawer.clk must be connected to a clock output
+Error: 2016.04.21.19:29:52 Error: nios_system.pixel_buffer: pixel_buffer.clk must be connected to a clock output
+Error: 2016.04.21.19:29:52 Error: nios_system.pixel_buffer_dma: pixel_buffer_dma.clk must be connected to a clock output
+Error: 2016.04.21.19:29:52 Error: nios_system.rgb_resampler: rgb_resampler.clk must be connected to a clock output
+Error: 2016.04.21.19:29:52 Error: nios_system.scaler: scaler.clk must be connected to a clock output
+Error: 2016.04.21.19:29:52 Error: nios_system.vga_controller: vga_controller.clk must be connected to a clock output
+Error: 2016.04.21.19:29:52 Error: nios_system.alpha_blender: alpha_blender.reset must be connected to a reset source
+Error: 2016.04.21.19:29:52 Error: nios_system.buttons: buttons.reset must be connected to a reset source
+Error: 2016.04.21.19:29:52 Error: nios_system.char_drawer: char_drawer.reset must be connected to a reset source
+Error: 2016.04.21.19:29:52 Error: nios_system.pixel_buffer: pixel_buffer.reset must be connected to a reset source
+Error: 2016.04.21.19:29:52 Error: nios_system.pixel_buffer_dma: pixel_buffer_dma.reset must be connected to a reset source
+Error: 2016.04.21.19:29:52 Error: nios_system.rgb_resampler: rgb_resampler.reset must be connected to a reset source
+Error: 2016.04.21.19:29:52 Error: nios_system.scaler: scaler.reset must be connected to a reset source
+Error: 2016.04.21.19:29:52 Error: nios_system.vga_controller: vga_controller.reset must be connected to a reset source
+Error: 2016.04.21.19:29:52 Error: nios_system.video_fifo: video_fifo.reset_stream_in must be connected to a reset source
+Error: 2016.04.21.19:29:52 Error: nios_system.video_fifo: video_fifo.reset_stream_out must be connected to a reset source
+Info: 2016.04.21.19:29:53 Info: nios_system: Generating nios_system "nios_system" for QUARTUS_SYNTH
+Error: 2016.04.21.19:29:53 Error: pixel_buffer_dma_avalon_pixel_dma_master_translator.avalon_anti_master_0: Cannot connect pixel_buffer_dma_avalon_pixel_dma_master_translator.reset because pixel_buffer_dma.reset is not connected. If pixel_buffer_dma.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Error: 2016.04.21.19:29:53 Error: pixel_buffer_avalon_sram_slave_translator.avalon_anti_slave_0: Cannot connect pixel_buffer_avalon_sram_slave_translator.reset because pixel_buffer.reset is not connected. If pixel_buffer.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Error: 2016.04.21.19:29:53 Error: char_drawer_avalon_char_buffer_slave_translator.avalon_anti_slave_0: Cannot connect char_drawer_avalon_char_buffer_slave_translator.reset because char_drawer.reset is not connected. If char_drawer.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Error: 2016.04.21.19:29:53 Error: char_drawer_avalon_char_control_slave_translator.avalon_anti_slave_0: Cannot connect char_drawer_avalon_char_control_slave_translator.reset because char_drawer.reset is not connected. If char_drawer.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Error: 2016.04.21.19:29:53 Error: pixel_buffer_dma_avalon_control_slave_translator.avalon_anti_slave_0: Cannot connect pixel_buffer_dma_avalon_control_slave_translator.reset because pixel_buffer_dma.reset is not connected. If pixel_buffer_dma.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Error: 2016.04.21.19:29:53 Error: buttons_avalon_parallel_port_slave_translator.avalon_anti_slave_0: Cannot connect buttons_avalon_parallel_port_slave_translator.reset because buttons.reset is not connected. If buttons.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Warning: 2016.04.21.19:29:55 Warning: nios2_processor.irq: Cannot connect clock for irq_mapper.sender
+Error: 2016.04.21.19:29:55 Error: Cannot find clock for hw_only_clk.clk. If hw_only_clk.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller in the generated RTL.
+Error: 2016.04.21.19:29:55 Error: Cannot find clock for jtag_uart.clk. If jtag_uart.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_001, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_001 in the generated RTL.
+Error: 2016.04.21.19:29:55 Error: Cannot find clock for leds.clk. If leds.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_002, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_002 in the generated RTL.
+Error: 2016.04.21.19:29:55 Error: Cannot find clock for nios2_processor.clk. If nios2_processor.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_003, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_003 in the generated RTL.
+Error: 2016.04.21.19:29:55 Error: Cannot find clock for onchip_memory.clk1. If onchip_memory.clk1 is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_004, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_004 in the generated RTL.
+Error: 2016.04.21.19:29:55 Error: Cannot find clock for sdram.clk. If sdram.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_005, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_005 in the generated RTL.
+Error: 2016.04.21.19:29:55 Error: Cannot find clock for switches.clk. If switches.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_006, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_006 in the generated RTL.
+Error: 2016.04.21.19:29:55 Error: Cannot find clock for sys_clk.clk. If sys_clk.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_007, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_007 in the generated RTL.
+Error: 2016.04.21.19:29:55 Error: Cannot find clock for timestamp_clk.clk. If timestamp_clk.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_008, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_008 in the generated RTL.
+Error: 2016.04.21.19:29:55 Error: Cannot find clock for irq_mapper.clk. If irq_mapper.clk is exported please use a clock bridge and reset bridge instead of a clock source. Reset synchronizer, rst_controller_009, may not function if not connected to a clock source. To rectify this error a clock must be manually attached to the clock port of rst_controller_009 in the generated RTL.
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_0:clk:clk_out (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_1:clk:clk_out (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for sdram:clk:clk (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for jtag_uart:clk:clk (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for leds:clk:clk (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for switches:clk:clk (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for nios2_processor:clk:clk (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for sys_clk:clk:clk (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for timestamp_clk:clk:clk (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for hw_only_clk:clk:clk (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for onchip_memory:clk1:clk (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for video_fifo:clock_stream_in:clk_stream_in (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for video_fifo:clock_stream_out:clk_stream_out (clk)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+Warning: 2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+2016.04.21.19:29:56 Warning: nios_system: "No matching role found for nios2_processor:debug_reset_request:debug_reset_request (reset)"
+com.altera.hdlwriter.EntityWritingException: Connection  is not connected pixel_buffer_dma:avalon_pixel_dma_master -> ?
+Info:     at com.altera.hdlwriter.internal.OldEntityWriterInternal.addConnection(OldEntityWriterInternal.java:431)
+Info:     at com.altera.hdlwriter.internal.OldEntityWriterInternal.writeHDLInternal(OldEntityWriterInternal.java:122)
+Info:     at com.altera.hdlwriter.internal.EntityWriter.writeHDL(EntityWriter.java:40)
+Info:     at com.altera.sopc.generator.EnsembleGenerationFileSet2.generate(EnsembleGenerationFileSet2.java:61)
+Info:     at com.altera.sopc.generator.FileSet2.generate(FileSet2.java:150)
+Info:     at com.altera.sopc.generator.Sellafield.generate(Sellafield.java:366)
+Info:     at com.altera.sopcmodel.sbtools.sbgenerate.SbGenerate.performGeneration(SbGenerate.java:518)
+Info:     at com.altera.sopcmodel.sbtools.sbgenerate.SbGenerate.act(SbGenerate.java:464)
+Info:     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:718)
+Info:     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:730)
+Info:     at com.altera.sopceditor.tools.generation.QsysGenerationTask.generateSynthesis(QsysGenerationTask.java:589)
+Info:     at com.altera.sopceditor.tools.generation.QsysGenerationTask.generate(QsysGenerationTask.java:363)
+Info:     at com.altera.sopceditor.tools.generation.QsysGenerationTask.run(QsysGenerationTask.java:127)
+Info:     at com.altera.qsys.generate.QsysGenerate.createGenerationTaskOuter(QsysGenerate.java:617)
+Info:     at com.altera.qsys.generate.QsysGenerate.runGenerationFlow(QsysGenerate.java:546)
+Info:     at com.altera.qsys.generate.QsysGenerate.act(QsysGenerate.java:339)
+Info:     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:718)
+Info:     at com.altera.qsys.generate.QsysGenerate.main(QsysGenerate.java:159)
+Info: 2016.04.21.19:29:56 Info: nios_system: Done "nios_system" with 1 modules, 0 files
+Error: 2016.04.21.19:29:56 Error: qsys-generate failed with exit code 1: 63 Errors, 42 Warnings
+Info: 2016.04.21.19:29:56 Info: Finished: Create HDL design files for synthesis
+Info (11904): Restoring file "nios_system.BAK.qsys" to "nios_system.qsys"
+Error (14923): Error upgrading Qsys file "nios_system.qsys"
+Error (11890): Unable to automatically upgrade Qsys component. Please manually upgrade "nios_system.qsys" in Qsys
+Error (23031): Evaluation of Tcl script c:/altera_lite/15.1/quartus/common/tcl/internal/ip_regen/ip_regen.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 126 errors, 53 warnings
+    Error: Peak virtual memory: 701 megabytes
+    Error: Processing ended: Thu Apr 21 19:29:56 2016
+    Error: Elapsed time: 00:00:47
+    Error: Total CPU time (on all processors): 00:01:19
+
+
