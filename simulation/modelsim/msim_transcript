@@ -11,50 +11,57 @@
 # ** Warning: Copied C:/altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/divider.sv}
+# vlog -sv -work work +incdir+C:/Lab8_provided {C:/Lab8_provided/timer.sv}
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 13:15:26 on Apr 25,2016
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Lab8_provided" C:/Lab8_provided/divider.sv 
-# -- Compiling module divider
+# Start time: 19:30:22 on Apr 29,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Lab8_provided" C:/Lab8_provided/timer.sv 
+# -- Compiling module timer
 # 
 # Top level modules:
-# 	divider
-# End time: 13:15:26 on Apr 25,2016, Elapsed time: 0:00:00
+# 	timer
+# End time: 19:30:22 on Apr 29,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlib nios_system
+# ** Warning: (vlib-34) Library already exists at "nios_system".
+# 
 # vmap nios_system nios_system
 # Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
 # vmap -modelsim_quiet nios_system nios_system 
 # Modifying modelsim.ini
 # 
-vsim work.divider
-# vsim work.divider 
-# Start time: 13:15:38 on Apr 25,2016
+vsim work.timer
+# vsim work.timer 
+# Start time: 19:30:31 on Apr 29,2016
 # Loading sv_std.std
-# Loading work.divider
-add wave -position end  sim:/divider/clk_out
-add wave -position end  sim:/divider/clk_in
-force -freeze sim:/divider/clk_in 1 0, 0 {10000 ps} -r 20ns
-restart -f; run 10000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-force -freeze sim:/divider/clk_in 1 0, 0 {10 ps} -r 20
-wave create -driver freeze -pattern clock -initialvalue HiZ -period 20ns -dutycycle 50 -starttime 0ns -endtime 1000ns sim:/divider/clk_in
+# Loading work.timer
+do wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
 # Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
-restart -f; run 10000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-noforce sim:/divider/clk_in
-wave create -driver freeze -pattern clock -initialvalue HiZ -period 20ns -dutycycle 50 -starttime 0ns -endtime 1000ns sim:/divider/clk_in
-# /divider/clk_in already exists in the wave, cannot add twice
+# 1
+# 1
+# 1
+# ** Error: /timer/TAC already exists in the wave, cannot add twice
 # Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
 # See Command Reference manual for pattern specific <args>
-wave create -driver freeze -pattern clock -initialvalue HiZ -period 20ns -dutycycle 50 -starttime 0ns -endtime 1000ns sim:/divider/clk_in
-restart -f; run 10000ns
+# Executing ONERROR command at macro ./wave.do line 55
+# 1
+# 1
+do wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+# 1
+# 1
+# ** Error: /timer/TAC already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro ./wave.do line 55
+# 1
+# 1
+restart -f; run 1000ns
+wave create -driver freeze -pattern constant -value 16'hff04 -range 15 0 -starttime 0ns -endtime 1000ns sim:/timer/address
+restart -f; run 1000ns
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
-# End time: 13:28:51 on Apr 25,2016, Elapsed time: 0:13:13
-# Errors: 1, Warnings: 0
+# End time: 20:13:53 on Apr 29,2016, Elapsed time: 0:43:22
+# Errors: 6, Warnings: 0

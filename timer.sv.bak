@@ -1,0 +1,59 @@
+module timers(
+	input logic clk,
+	input Reset,
+	input logic int_a,
+	output logic irq,
+	input logic [15:0] address,
+	input logic [7:0] din,
+	input logic we_n,
+	input logic [7:0] TAC,
+	input logic [7:0] TMA,
+	output logic [7:0] DIV,
+	output logic [7:0] TIMA
+	
+);
+
+enum logic [1:0] {IDLE,INT} state, next_state;
+
+logic main_clk;
+logic [7:0] count;
+logic [7:0] divider;
+assign DIV = divider;
+assign TIMA = count;
+logic [31:0] clk_counter;
+logic [31:0] div_counter;
+logic [31:0] reset_point;
+always_comb
+begin
+if(TAC[1:0]==2'b00)
+	reset_point = ;
+else if(TAC[1:0]==2'b01)
+	reset_point = ;
+else if(TAC[1:0]==2'b10)
+	reset_point = ;
+else  //11
+	reset_point = ;
+end
+
+always_comb  //state actions
+begin
+	irq = 1'b0;
+	if(state == INT)
+		begin
+			irq = 1'b1;
+		end
+end
+
+always_ff @ (posedge clk or posedge Reset)
+    begin 
+		if(main_clk == 1'b1)
+	
+		if(clk_counter >= reset_point)
+			begin
+				
+				//
+				clk_counter <= 0;
+			end
+    end
+
+endmodule

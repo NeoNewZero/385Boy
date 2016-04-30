@@ -8,27 +8,27 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Lab8_provided/simulation/modelsim
-vdivider
+vtimer
 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-!s110 1461611726
+!s110 1461979822
 !i10b 1
-!s100 46d0[8GZ2amIl@@PE;LI:1
-I2ND]B@jPNJ]Uj0RJI5hWn2
+!s100 1>^iJMed6E1PL`?MzlzV_1
+IU8bGGzh3LmR6G6KZZ@8jf1
 VDg1SIo80bB@j0V0VzS_@n1
-!s105 divider_sv_unit
+!s105 timer_sv_unit
 S1
 R0
-w1461611612
-8C:/Lab8_provided/divider.sv
-FC:/Lab8_provided/divider.sv
+w1461979782
+8C:/Lab8_provided/timer.sv
+FC:/Lab8_provided/timer.sv
 L0 1
 OV;L;10.4b;61
 r1
 !s85 0
 31
-!s108 1461611726.000000
-!s107 C:/Lab8_provided/divider.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Lab8_provided|C:/Lab8_provided/divider.sv|
+!s108 1461979822.000000
+!s107 C:/Lab8_provided/timer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Lab8_provided|C:/Lab8_provided/timer.sv|
 !i113 1
 o-sv -work work
 !s92 -sv -work work +incdir+C:/Lab8_provided
